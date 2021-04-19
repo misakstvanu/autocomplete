@@ -27,7 +27,7 @@
           <template v-for="(result, index) in results">
             <slot name="result" :result="result" :props="resultProps[index]">
               <li :key="resultProps[index].id" v-bind="resultProps[index]">
-                {{ getResultValue(result) }}
+                {{ getResultValue(result.name) }}
               </li>
             </slot>
           </template>
@@ -116,7 +116,7 @@ export default {
     inputProps() {
       return {
         class: `${this.baseClass}-input`,
-        value: this.value,
+        value: this.value.name ?? this.value,
         role: 'combobox',
         autocomplete: 'off',
         autocapitalize: 'off',
@@ -199,6 +199,7 @@ export default {
   methods: {
     setValue(result) {
       this.value = result ? this.getResultValue(result) : ''
+      this.$emit('selected', result)
     },
 
     handleUpdate(results, selectedIndex) {
