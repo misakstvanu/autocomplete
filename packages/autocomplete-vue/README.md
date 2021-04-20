@@ -1,27 +1,11 @@
 # @trevoreyre/autocomplete-vue
 
-## Demo
-
-Take a look at the [documentation page](https://autocomplete.trevoreyre.com), and the [Codepen examples](https://codepen.io/collection/nLLLyx/).
-
 ## Installation
 
 Install the component from npm.
 
 ```bash
-npm install --save @trevoreyre/autocomplete-vue
-```
-
-Or using yarn.
-
-```bash
-yarn add @trevoreyre/autocomplete-vue
-```
-
-You can also use the browser bundle in a script tag.
-
-```html
-<script src="https://unpkg.com/@trevoreyre/autocomplete-vue"></script>
+npm install --save @misakstvanu/autocomplete
 ```
 
 ## Usage
@@ -30,8 +14,8 @@ Import the autocomplete component and register it globally in your Vue app. Impo
 
 ```js
 import Vue from 'vue'
-import Autocomplete from '@trevoreyre/autocomplete-vue'
-import '@trevoreyre/autocomplete-vue/dist/style.css'
+import Autocomplete from '@misakstvanu/autocomplete-vue'
+import '@misakstvanu/autocomplete/dist/style.css'
 
 Vue.use(Autocomplete)
 ```
@@ -39,7 +23,7 @@ Vue.use(Autocomplete)
 You can also import autocomplete locally in your component if you prefer.
 
 ```js
-import Autocomplete from '@trevoreyre/autocomplete-vue'
+import Autocomplete from '@misakstvanu/autocomplete'
 
 export default {
   name: 'my-component',
